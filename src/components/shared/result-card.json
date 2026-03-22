@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_shared_result_cards",
+  "info": { "displayName": "Result Card", "icon": "layout" },
+  "options": {},
+  "attributes": {
+    "title":       { "type": "string", "required": true },
+    "description": { "type": "text",   "required": true },
+    "image":       { "type": "string" }
+  }
+}

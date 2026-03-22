@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registrations",
+  "info": {
+    "singularName": "registration",
+    "pluralName": "registrations",
+    "displayName": "Registration",
+    "description": "Course registration submissions"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "registrations"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "sex": {
+      "type": "enumeration",
+      "enum": ["masculino", "feminino", "outro"]
+    },
+    "occupation": {
+      "type": "enumeration",
+      "enum": ["estudante", "empregado", "desempregado", "empreendedor", "outro"]
+    },
+    "message": {
+      "type": "text"
+    }
+  }
+}

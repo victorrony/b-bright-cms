@@ -1,0 +1,9 @@
+{
+  "collectionName": "components_shared_initiatives",
+  "info": { "displayName": "Initiative", "icon": "rocket" },
+  "options": {},
+  "attributes": {
+    "title":       { "type": "string", "required": true },
+    "description": { "type": "text",   "required": true }
+  }
+}

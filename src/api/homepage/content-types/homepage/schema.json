@@ -1,0 +1,62 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepage",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": "All homepage sections content"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "heroTitle":    { "type": "string" },
+    "heroSubtitle": { "type": "string" },
+    "heroImage":    { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "heroButtons":  { "type": "component", "repeatable": true, "component": "shared.hero-button" },
+
+    "aboutHeading": { "type": "string" },
+    "aboutBody":    { "type": "text" },
+    "aboutMission": { "type": "text" },
+    "aboutVision":  { "type": "text" },
+    "aboutPhotos":  { "type": "media", "multiple": true, "allowedTypes": ["images"] },
+
+    "values": { "type": "component", "repeatable": true, "component": "shared.value-item" },
+
+    "timelineTitle":      { "type": "string" },
+    "timelineSubtitle":   { "type": "text" },
+    "timelineMilestones": { "type": "component", "repeatable": true, "component": "shared.milestone" },
+
+    "trainingTitle":   { "type": "string" },
+    "trainingSubtitle":{ "type": "text" },
+    "trainingModules": { "type": "component", "repeatable": true, "component": "shared.training-module" },
+
+    "stats":             { "type": "component", "repeatable": true, "component": "shared.stat-item" },
+    "resultCards":       { "type": "component", "repeatable": true, "component": "shared.result-card" },
+    "resultsBackground": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "resultsTitleLine1": { "type": "string" },
+    "resultsTitleLine2": { "type": "string" },
+    "resultsSubtitle":   { "type": "text" },
+
+    "visionTitle":      { "type": "string" },
+    "visionSubtitle":   { "type": "text" },
+    "visionInitiatives":{ "type": "component", "repeatable": true, "component": "shared.initiative" },
+
+    "ctaHeading1": { "type": "string" },
+    "ctaHeading2":  { "type": "string" },
+    "ctaBody":      { "type": "text" },
+    "ctaButtons":   { "type": "component", "repeatable": true, "component": "shared.cta-button" },
+
+    "coursesOtherTitle":    { "type": "string" },
+    "coursesOtherSubtitle": { "type": "text" },
+
+    "coursesHeroLabel": { "type": "string" },
+    "coursesHeroTitle": { "type": "string" },
+    "coursesHeroImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+
+    "courseLabelOrganizer": { "type": "string" },
+    "courseLabelTrainer":   { "type": "string" },
+    "courseLabelEnroll":    { "type": "string" }
+  }
+}

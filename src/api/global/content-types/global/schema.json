@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "global",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Global",
+    "description": "Site-wide settings: navbar, footer, contact info"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "required": true,
+      "default": "B-Bright"
+    },
+    "siteDescription": {
+      "type": "text"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "navLinks": { "type": "component", "repeatable": true, "component": "shared.nav-link" },
+    "ctaLabel": { "type": "string", "default": "JOIN US" },
+    "ctaHref":  { "type": "string", "default": "/#join" },
+    "footerDescription": { "type": "text" },
+    "footerColumns": { "type": "component", "repeatable": true, "component": "shared.footer-column" },
+    "socialLinks":   { "type": "component", "repeatable": true, "component": "shared.social-link" }
+  }
+}
