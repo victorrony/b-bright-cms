@@ -445,9 +445,9 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    credentials: Schema.Attribute.JSON;
+    credentials: Schema.Attribute.Component<'shared.credential', true>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    details: Schema.Attribute.JSON;
+    details: Schema.Attribute.Component<'shared.detail-item', true>;
     extraText: Schema.Attribute.Text;
     image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -473,6 +473,39 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCoursesPageCoursesPage extends Struct.SingleTypeSchema {
+  collectionName: 'courses_page';
+  info: {
+    description: 'Content for the /cursos page';
+    displayName: 'Courses Page';
+    pluralName: 'courses-pages';
+    singularName: 'courses-page';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroImage: Schema.Attribute.Media<'images'>;
+    heroLabel: Schema.Attribute.String;
+    heroTitle: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::courses-page.courses-page'
+    > &
+      Schema.Attribute.Private;
+    otherSubtitle: Schema.Attribute.Text;
+    otherTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'global';
   info: {
@@ -485,6 +518,9 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    courseLabelEnroll: Schema.Attribute.String;
+    courseLabelOrganizer: Schema.Attribute.String;
+    courseLabelTrainer: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -530,14 +566,6 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     aboutMission: Schema.Attribute.Text;
     aboutPhotos: Schema.Attribute.Media<'images', true>;
     aboutVision: Schema.Attribute.Text;
-    courseLabelEnroll: Schema.Attribute.String;
-    courseLabelOrganizer: Schema.Attribute.String;
-    courseLabelTrainer: Schema.Attribute.String;
-    coursesHeroImage: Schema.Attribute.Media<'images'>;
-    coursesHeroLabel: Schema.Attribute.String;
-    coursesHeroTitle: Schema.Attribute.String;
-    coursesOtherSubtitle: Schema.Attribute.Text;
-    coursesOtherTitle: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -546,7 +574,7 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
     ctaHeading1: Schema.Attribute.String;
     ctaHeading2: Schema.Attribute.String;
     heroButtons: Schema.Attribute.Component<'shared.hero-button', true>;
-    heroImage: Schema.Attribute.Media<'images'>;
+    heroImage: Schema.Attribute.Media<'images' | 'videos', true>;
     heroSubtitle: Schema.Attribute.String;
     heroTitle: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1129,6 +1157,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::course.course': ApiCourseCourse;
+      'api::courses-page.courses-page': ApiCoursesPageCoursesPage;
       'api::global.global': ApiGlobalGlobal;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::registration.registration': ApiRegistrationRegistration;

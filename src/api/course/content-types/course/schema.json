@@ -30,7 +30,9 @@
       "required": true
     },
     "credentials": {
-      "type": "json"
+      "type": "component",
+      "component": "shared.credential",
+      "repeatable": true
     },
     "description": {
       "type": "text",
@@ -46,7 +48,9 @@
       "allowedTypes": ["images"]
     },
     "details": {
-      "type": "json"
+      "type": "component",
+      "component": "shared.detail-item",
+      "repeatable": true
     },
     "registrations": {
       "type": "relation",

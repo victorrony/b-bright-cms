@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "courses_page",
+  "info": {
+    "singularName": "courses-page",
+    "pluralName": "courses-pages",
+    "displayName": "Courses Page",
+    "description": "Content for the /cursos page"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroLabel": {
+      "type": "string"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "otherTitle": {
+      "type": "string"
+    },
+    "otherSubtitle": {
+      "type": "text"
+    }
+  }
+}

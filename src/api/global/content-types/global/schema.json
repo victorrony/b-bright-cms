@@ -30,6 +30,9 @@
     "ctaHref":  { "type": "string", "default": "/#join" },
     "footerDescription": { "type": "text" },
     "footerColumns": { "type": "component", "repeatable": true, "component": "shared.footer-column" },
-    "socialLinks":   { "type": "component", "repeatable": true, "component": "shared.social-link" }
+    "socialLinks":   { "type": "component", "repeatable": true, "component": "shared.social-link" },
+    "courseLabelOrganizer": { "type": "string" },
+    "courseLabelTrainer":   { "type": "string" },
+    "courseLabelEnroll":    { "type": "string" }
   }
 }

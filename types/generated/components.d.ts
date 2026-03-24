@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedCredential extends Struct.ComponentSchema {
+  collectionName: 'components_shared_credentials';
+  info: {
+    description: 'A credential or badge earned from a course';
+    displayName: 'Credential';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedCtaButton extends Struct.ComponentSchema {
   collectionName: 'components_shared_cta_buttons';
   info: {
@@ -11,6 +22,18 @@ export interface SharedCtaButton extends Struct.ComponentSchema {
     label: Schema.Attribute.String & Schema.Attribute.Required;
     variant: Schema.Attribute.Enumeration<['cta', 'cta-ghost']> &
       Schema.Attribute.DefaultTo<'cta'>;
+  };
+}
+
+export interface SharedDetailItem extends Struct.ComponentSchema {
+  collectionName: 'components_shared_detail_items';
+  info: {
+    description: 'A label/value pair for course details (duration, level, etc.)';
+    displayName: 'Detail Item';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -157,7 +180,9 @@ export interface SharedValueItem extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.credential': SharedCredential;
       'shared.cta-button': SharedCtaButton;
+      'shared.detail-item': SharedDetailItem;
       'shared.footer-column': SharedFooterColumn;
       'shared.footer-link': SharedFooterLink;
       'shared.hero-button': SharedHeroButton;
