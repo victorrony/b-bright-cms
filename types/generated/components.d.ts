@@ -157,7 +157,7 @@ export interface SharedTrainingModule extends Struct.ComponentSchema {
     icon: 'book';
   };
   attributes: {
-    backgroundImage: Schema.Attribute.String;
+    backgroundImage: Schema.Attribute.Media<'images'>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     icon: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;

@@ -6,6 +6,6 @@
     "icon":            { "type": "string", "required": true },
     "title":           { "type": "string", "required": true },
     "description":     { "type": "text",   "required": true },
-    "backgroundImage": { "type": "string" }
+    "backgroundImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
   }
 }

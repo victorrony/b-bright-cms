@@ -43,6 +43,14 @@
     "aboutVision": {
       "type": "text"
     },
+    "missionLabel": {
+      "type": "string",
+      "default": "OUR MISSION"
+    },
+    "visionLabel": {
+      "type": "string",
+      "default": "OUR VISION"
+    },
     "aboutPhotos": {
       "type": "media",
       "multiple": true,

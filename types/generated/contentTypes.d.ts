@@ -518,6 +518,8 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    copyrightText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'All rights reserved.'>;
     courseLabelEnroll: Schema.Attribute.String;
     courseLabelOrganizer: Schema.Attribute.String;
     courseLabelTrainer: Schema.Attribute.String;
@@ -535,6 +537,10 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
       'api::global.global'
     > &
       Schema.Attribute.Private;
+    logoFooter: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    logoNav: Schema.Attribute.Media<'images'>;
     navLinks: Schema.Attribute.Component<'shared.nav-link', true>;
     phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
@@ -583,6 +589,8 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       'api::homepage.homepage'
     > &
       Schema.Attribute.Private;
+    missionLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'OUR MISSION'>;
     publishedAt: Schema.Attribute.DateTime;
     resultCards: Schema.Attribute.Component<'shared.result-card', true>;
     resultsBackground: Schema.Attribute.Media<'images'>;
@@ -601,6 +609,8 @@ export interface ApiHomepageHomepage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     values: Schema.Attribute.Component<'shared.value-item', true>;
     visionInitiatives: Schema.Attribute.Component<'shared.initiative', true>;
+    visionLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'OUR VISION'>;
     visionSubtitle: Schema.Attribute.Text;
     visionTitle: Schema.Attribute.String;
   };
