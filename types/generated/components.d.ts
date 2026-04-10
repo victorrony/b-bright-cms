@@ -61,6 +61,26 @@ export interface SharedFooterLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFormField extends Struct.ComponentSchema {
+  collectionName: 'components_shared_form_fields';
+  info: {
+    description: 'A dynamic form field definition for course registration forms';
+    displayName: 'Form Field';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    options: Schema.Attribute.Text;
+    placeholder: Schema.Attribute.String;
+    required: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    type: Schema.Attribute.Enumeration<
+      ['text', 'url', 'email', 'number', 'select', 'textarea', 'checkbox']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'text'>;
+  };
+}
+
 export interface SharedHeroButton extends Struct.ComponentSchema {
   collectionName: 'components_shared_hero_buttons';
   info: {
@@ -185,6 +205,7 @@ declare module '@strapi/strapi' {
       'shared.detail-item': SharedDetailItem;
       'shared.footer-column': SharedFooterColumn;
       'shared.footer-link': SharedFooterLink;
+      'shared.form-field': SharedFormField;
       'shared.hero-button': SharedHeroButton;
       'shared.initiative': SharedInitiative;
       'shared.milestone': SharedMilestone;

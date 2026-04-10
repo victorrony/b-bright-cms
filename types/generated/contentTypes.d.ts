@@ -449,6 +449,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     details: Schema.Attribute.Component<'shared.detail-item', true>;
     extraText: Schema.Attribute.Text;
+    formFields: Schema.Attribute.Component<'shared.form-field', true>;
     image: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

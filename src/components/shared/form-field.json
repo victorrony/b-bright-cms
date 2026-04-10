@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_form_fields",
+  "info": {
+    "displayName": "Form Field",
+    "description": "A dynamic form field definition for course registration forms"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["text", "url", "email", "number", "select", "textarea", "checkbox"],
+      "required": true,
+      "default": "text"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean",
+      "default": false
+    },
+    "options": {
+      "type": "text"
+    }
+  }
+}

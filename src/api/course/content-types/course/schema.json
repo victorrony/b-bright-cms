@@ -57,6 +57,11 @@
       "relation": "oneToMany",
       "target": "api::registration.registration",
       "mappedBy": "course"
+    },
+    "formFields": {
+      "type": "component",
+      "component": "shared.form-field",
+      "repeatable": true
     }
   }
 }
