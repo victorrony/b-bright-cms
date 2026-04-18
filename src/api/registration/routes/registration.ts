@@ -1,3 +1,14 @@
-import { factories } from '@strapi/strapi';
-
-export default factories.createCoreRouter('api::registration.registration');
+export default {
+  routes: [
+    {
+      method: 'POST',
+      path: '/registrations',
+      handler: 'registration.create',
+      config: {
+        auth: false,
+        policies: [],
+        middlewares: [],
+      },
+    },
+  ],
+};

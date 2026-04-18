@@ -26,6 +26,13 @@
     "email": {
       "type": "email"
     },
+    "logoNav": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "navLinks": {
       "type": "component",
       "component": "shared.nav-link",
@@ -64,13 +71,6 @@
     "copyrightText": {
       "type": "string",
       "default": "All rights reserved."
-    },
-    "logoNav": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
     },
     "logoFooter": {
       "type": "media",

@@ -135,6 +135,6 @@
       "type": "component",
       "component": "shared.cta-button",
       "repeatable": true
-    },
+    }
   }
 }
