@@ -62,6 +62,24 @@
       "type": "component",
       "component": "shared.form-field",
       "repeatable": true
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "spots": {
+      "type": "integer"
+    },
+    "courseStatus": {
+      "type": "enumeration",
+      "enum": ["aberto", "encerrado", "em_breve"],
+      "default": "aberto"
     }
   }
 }

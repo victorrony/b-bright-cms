@@ -2,8 +2,8 @@ export default {
   routes: [
     {
       method: 'POST',
-      path: '/registrations',
-      handler: 'registration.create',
+      path: '/members',
+      handler: 'member.create',
       config: {
         auth: false,
         policies: [],
@@ -12,8 +12,8 @@ export default {
     },
     {
       method: 'GET',
-      path: '/registrations/export',
-      handler: 'registration.exportExcel',
+      path: '/members/export',
+      handler: 'member.exportExcel',
       config: {
         auth: false,
         policies: [],
@@ -22,8 +22,8 @@ export default {
     },
     {
       method: 'GET',
-      path: '/registrations',
-      handler: 'registration.find',
+      path: '/members',
+      handler: 'member.find',
       config: {
         policies: [],
         middlewares: [],
@@ -31,8 +31,17 @@ export default {
     },
     {
       method: 'GET',
-      path: '/registrations/:id',
-      handler: 'registration.findOne',
+      path: '/members/:id',
+      handler: 'member.findOne',
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
+    {
+      method: 'PUT',
+      path: '/members/:id',
+      handler: 'member.update',
       config: {
         policies: [],
         middlewares: [],
@@ -40,8 +49,8 @@ export default {
     },
     {
       method: 'DELETE',
-      path: '/registrations/:id',
-      handler: 'registration.delete',
+      path: '/members/:id',
+      handler: 'member.delete',
       config: {
         policies: [],
         middlewares: [],

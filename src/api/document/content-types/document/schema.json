@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents",
+  "info": {
+    "singularName": "document",
+    "pluralName": "documents",
+    "displayName": "Document",
+    "description": "GBB official documents and accountability reports"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["relatorios_anuais", "prestacoes_de_contas", "atas_de_reuniao", "outros"],
+      "required": true,
+      "default": "outros"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["files"]
+    },
+    "publishDate": {
+      "type": "date",
+      "required": true
+    }
+  }
+}
