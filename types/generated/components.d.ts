@@ -1,10 +1,10 @@
-import type { Schema, Struct } from '@strapi/strapi';
+import type { Schema, Struct } from "@strapi/strapi";
 
 export interface SharedCredential extends Struct.ComponentSchema {
-  collectionName: 'components_shared_credentials';
+  collectionName: "components_shared_credentials";
   info: {
-    description: 'A credential or badge earned from a course';
-    displayName: 'Credential';
+    description: "A credential or badge earned from a course";
+    displayName: "Credential";
   };
   attributes: {
     label: Schema.Attribute.String & Schema.Attribute.Required;
@@ -12,24 +12,23 @@ export interface SharedCredential extends Struct.ComponentSchema {
 }
 
 export interface SharedCtaButton extends Struct.ComponentSchema {
-  collectionName: 'components_shared_cta_buttons';
+  collectionName: "components_shared_cta_buttons";
   info: {
-    displayName: 'CTA Button';
-    icon: 'cursor';
+    displayName: "CTA Button";
+    icon: "cursor";
   };
   attributes: {
     href: Schema.Attribute.String & Schema.Attribute.Required;
     label: Schema.Attribute.String & Schema.Attribute.Required;
-    variant: Schema.Attribute.Enumeration<['cta', 'cta-ghost']> &
-      Schema.Attribute.DefaultTo<'cta'>;
+    variant: Schema.Attribute.Enumeration<["cta", "cta-ghost"]> & Schema.Attribute.DefaultTo<"cta">;
   };
 }
 
 export interface SharedDetailItem extends Struct.ComponentSchema {
-  collectionName: 'components_shared_detail_items';
+  collectionName: "components_shared_detail_items";
   info: {
-    description: 'A label/value pair for course details (duration, level, etc.)';
-    displayName: 'Detail Item';
+    description: "A label/value pair for course details (duration, level, etc.)";
+    displayName: "Detail Item";
   };
   attributes: {
     label: Schema.Attribute.String & Schema.Attribute.Required;
@@ -38,22 +37,22 @@ export interface SharedDetailItem extends Struct.ComponentSchema {
 }
 
 export interface SharedFooterColumn extends Struct.ComponentSchema {
-  collectionName: 'components_shared_footer_columns';
+  collectionName: "components_shared_footer_columns";
   info: {
-    displayName: 'Footer Column';
-    icon: 'layout';
+    displayName: "Footer Column";
+    icon: "layout";
   };
   attributes: {
-    links: Schema.Attribute.Component<'shared.footer-link', true>;
+    links: Schema.Attribute.Component<"shared.footer-link", true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
 export interface SharedFooterLink extends Struct.ComponentSchema {
-  collectionName: 'components_shared_footer_links';
+  collectionName: "components_shared_footer_links";
   info: {
-    displayName: 'Footer Link';
-    icon: 'link';
+    displayName: "Footer Link";
+    icon: "link";
   };
   attributes: {
     href: Schema.Attribute.String & Schema.Attribute.Required;
@@ -62,10 +61,10 @@ export interface SharedFooterLink extends Struct.ComponentSchema {
 }
 
 export interface SharedFormField extends Struct.ComponentSchema {
-  collectionName: 'components_shared_form_fields';
+  collectionName: "components_shared_form_fields";
   info: {
-    description: 'A dynamic form field definition for course registration forms';
-    displayName: 'Form Field';
+    description: "A dynamic form field definition for course registration forms";
+    displayName: "Form Field";
   };
   attributes: {
     label: Schema.Attribute.String & Schema.Attribute.Required;
@@ -74,32 +73,32 @@ export interface SharedFormField extends Struct.ComponentSchema {
     placeholder: Schema.Attribute.String;
     required: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     type: Schema.Attribute.Enumeration<
-      ['text', 'url', 'email', 'number', 'select', 'textarea', 'checkbox']
+      ["text", "url", "email", "number", "select", "textarea", "checkbox"]
     > &
       Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'text'>;
+      Schema.Attribute.DefaultTo<"text">;
   };
 }
 
 export interface SharedHeroButton extends Struct.ComponentSchema {
-  collectionName: 'components_shared_hero_buttons';
+  collectionName: "components_shared_hero_buttons";
   info: {
-    displayName: 'Hero Button';
-    icon: 'cursor';
+    displayName: "Hero Button";
+    icon: "cursor";
   };
   attributes: {
     href: Schema.Attribute.String & Schema.Attribute.Required;
     label: Schema.Attribute.String & Schema.Attribute.Required;
-    variant: Schema.Attribute.Enumeration<['primary', 'outline', 'ghost']> &
-      Schema.Attribute.DefaultTo<'primary'>;
+    variant: Schema.Attribute.Enumeration<["primary", "outline", "ghost"]> &
+      Schema.Attribute.DefaultTo<"primary">;
   };
 }
 
 export interface SharedInitiative extends Struct.ComponentSchema {
-  collectionName: 'components_shared_initiatives';
+  collectionName: "components_shared_initiatives";
   info: {
-    displayName: 'Initiative';
-    icon: 'rocket';
+    displayName: "Initiative";
+    icon: "rocket";
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -108,10 +107,10 @@ export interface SharedInitiative extends Struct.ComponentSchema {
 }
 
 export interface SharedMilestone extends Struct.ComponentSchema {
-  collectionName: 'components_shared_milestones';
+  collectionName: "components_shared_milestones";
   info: {
-    displayName: 'Milestone';
-    icon: 'clock';
+    displayName: "Milestone";
+    icon: "clock";
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -121,10 +120,10 @@ export interface SharedMilestone extends Struct.ComponentSchema {
 }
 
 export interface SharedNavLink extends Struct.ComponentSchema {
-  collectionName: 'components_shared_nav_links';
+  collectionName: "components_shared_nav_links";
   info: {
-    displayName: 'Nav Link';
-    icon: 'link';
+    displayName: "Nav Link";
+    icon: "link";
   };
   attributes: {
     href: Schema.Attribute.String & Schema.Attribute.Required;
@@ -133,10 +132,10 @@ export interface SharedNavLink extends Struct.ComponentSchema {
 }
 
 export interface SharedResultCard extends Struct.ComponentSchema {
-  collectionName: 'components_shared_result_cards';
+  collectionName: "components_shared_result_cards";
   info: {
-    displayName: 'Result Card';
-    icon: 'layout';
+    displayName: "Result Card";
+    icon: "layout";
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -146,10 +145,10 @@ export interface SharedResultCard extends Struct.ComponentSchema {
 }
 
 export interface SharedSocialLink extends Struct.ComponentSchema {
-  collectionName: 'components_shared_social_links';
+  collectionName: "components_shared_social_links";
   info: {
-    displayName: 'Social Link';
-    icon: 'earth';
+    displayName: "Social Link";
+    icon: "earth";
   };
   attributes: {
     href: Schema.Attribute.String & Schema.Attribute.Required;
@@ -158,10 +157,10 @@ export interface SharedSocialLink extends Struct.ComponentSchema {
 }
 
 export interface SharedStatItem extends Struct.ComponentSchema {
-  collectionName: 'components_shared_stat_items';
+  collectionName: "components_shared_stat_items";
   info: {
-    displayName: 'Stat Item';
-    icon: 'chart-bar';
+    displayName: "Stat Item";
+    icon: "chart-bar";
   };
   attributes: {
     label: Schema.Attribute.String & Schema.Attribute.Required;
@@ -171,13 +170,13 @@ export interface SharedStatItem extends Struct.ComponentSchema {
 }
 
 export interface SharedTrainingModule extends Struct.ComponentSchema {
-  collectionName: 'components_shared_training_modules';
+  collectionName: "components_shared_training_modules";
   info: {
-    displayName: 'Training Module';
-    icon: 'book';
+    displayName: "Training Module";
+    icon: "book";
   };
   attributes: {
-    backgroundImage: Schema.Attribute.Media<'images'>;
+    backgroundImage: Schema.Attribute.Media<"images">;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     icon: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -185,10 +184,10 @@ export interface SharedTrainingModule extends Struct.ComponentSchema {
 }
 
 export interface SharedValueItem extends Struct.ComponentSchema {
-  collectionName: 'components_shared_value_items';
+  collectionName: "components_shared_value_items";
   info: {
-    displayName: 'Value Item';
-    icon: 'star';
+    displayName: "Value Item";
+    icon: "star";
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -197,24 +196,24 @@ export interface SharedValueItem extends Struct.ComponentSchema {
   };
 }
 
-declare module '@strapi/strapi' {
+declare module "@strapi/strapi" {
   export module Public {
     export interface ComponentSchemas {
-      'shared.credential': SharedCredential;
-      'shared.cta-button': SharedCtaButton;
-      'shared.detail-item': SharedDetailItem;
-      'shared.footer-column': SharedFooterColumn;
-      'shared.footer-link': SharedFooterLink;
-      'shared.form-field': SharedFormField;
-      'shared.hero-button': SharedHeroButton;
-      'shared.initiative': SharedInitiative;
-      'shared.milestone': SharedMilestone;
-      'shared.nav-link': SharedNavLink;
-      'shared.result-card': SharedResultCard;
-      'shared.social-link': SharedSocialLink;
-      'shared.stat-item': SharedStatItem;
-      'shared.training-module': SharedTrainingModule;
-      'shared.value-item': SharedValueItem;
+      "shared.credential": SharedCredential;
+      "shared.cta-button": SharedCtaButton;
+      "shared.detail-item": SharedDetailItem;
+      "shared.footer-column": SharedFooterColumn;
+      "shared.footer-link": SharedFooterLink;
+      "shared.form-field": SharedFormField;
+      "shared.hero-button": SharedHeroButton;
+      "shared.initiative": SharedInitiative;
+      "shared.milestone": SharedMilestone;
+      "shared.nav-link": SharedNavLink;
+      "shared.result-card": SharedResultCard;
+      "shared.social-link": SharedSocialLink;
+      "shared.stat-item": SharedStatItem;
+      "shared.training-module": SharedTrainingModule;
+      "shared.value-item": SharedValueItem;
     }
   }
 }

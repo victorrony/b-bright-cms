@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "documents_page",
+  "info": {
+    "singularName": "documents-page",
+    "pluralName": "documents-pages",
+    "displayName": "Documents Page",
+    "description": "Content for the /documentos page"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroLabel": {
+      "type": "string"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

@@ -122,6 +122,30 @@
       "component": "shared.initiative",
       "repeatable": true
     },
+    "coursesLabel": {
+      "type": "string",
+      "default": "Formação"
+    },
+    "coursesTitle": {
+      "type": "string",
+      "default": "Cursos da Geração"
+    },
+    "coursesLinkLabel": {
+      "type": "string",
+      "default": "Ver todos os cursos"
+    },
+    "galleryLabel": {
+      "type": "string",
+      "default": "Galeria"
+    },
+    "galleryTitle": {
+      "type": "string",
+      "default": "Momentos GBB"
+    },
+    "galleryLinkLabel": {
+      "type": "string",
+      "default": "Ver galeria completa"
+    },
     "ctaHeading1": {
       "type": "string"
     },

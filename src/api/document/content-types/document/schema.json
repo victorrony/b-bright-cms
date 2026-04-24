@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
@@ -20,15 +21,21 @@
     },
     "category": {
       "type": "enumeration",
-      "enum": ["relatorios_anuais", "prestacoes_de_contas", "atas_de_reuniao", "outros"],
       "required": true,
-      "default": "outros"
+      "default": "outros",
+      "enum": [
+        "relatorios_anuais",
+        "prestacoes_de_contas",
+        "outros"
+      ]
     },
     "file": {
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["files"]
+      "allowedTypes": [
+        "files"
+      ]
     },
     "publishDate": {
       "type": "date",

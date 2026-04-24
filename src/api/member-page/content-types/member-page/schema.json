@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "member_page",
+  "info": {
+    "singularName": "member-page",
+    "pluralName": "member-pages",
+    "displayName": "Member Page",
+    "description": "Content for the /tornar-me-membro page"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroLabel": {
+      "type": "string"
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

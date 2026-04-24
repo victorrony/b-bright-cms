@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
@@ -25,9 +26,15 @@
     },
     "category": {
       "type": "enumeration",
-      "enum": ["cursos", "eventos", "retiros", "conivios", "outros"],
       "required": true,
-      "default": "eventos"
+      "default": "eventos",
+      "enum": [
+        "cursos",
+        "eventos",
+        "retiros",
+        "conivios",
+        "outros"
+      ]
     },
     "eventDate": {
       "type": "date",
@@ -37,12 +44,17 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "photos": {
       "type": "media",
       "multiple": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
     },
     "youtubeUrl": {
       "type": "string"
