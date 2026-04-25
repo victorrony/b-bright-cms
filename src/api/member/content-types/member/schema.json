@@ -56,7 +56,7 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": ["pendente", "ativo", "inativo"],
+      "enum": ["pendente", "aprovado", "rejeitado"],
       "default": "pendente"
     }
   }

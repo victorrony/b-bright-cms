@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
@@ -22,8 +23,8 @@
     },
     "organizer": {
       "type": "string",
-      "required": true,
-      "default": "Geração B-Bright"
+      "default": "Geração B-Bright",
+      "required": true
     },
     "trainer": {
       "type": "string",
@@ -45,7 +46,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "details": {
       "type": "component",
@@ -78,8 +81,21 @@
     },
     "courseStatus": {
       "type": "enumeration",
-      "enum": ["aberto", "encerrado", "em_breve"],
-      "default": "aberto"
+      "default": "aberto",
+      "enum": [
+        "aberto",
+        "encerrado",
+        "em_breve"
+      ]
+    },
+    "price": {
+      "type": "string"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
     }
   }
 }

@@ -402,7 +402,7 @@ export interface ApiAlbumAlbum extends Struct.CollectionTypeSchema {
     category: Schema.Attribute.Enumeration<["cursos", "eventos", "retiros", "conivios", "outros"]> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<"eventos">;
-    cover: Schema.Attribute.Media<"images"> & Schema.Attribute.Required;
+    cover: Schema.Attribute.Media<"images" | "videos"> & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
     description: Schema.Attribute.Text;
@@ -444,6 +444,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     extraText: Schema.Attribute.Text;
     featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     formFields: Schema.Attribute.Component<"shared.form-field", true>;
+    gallery: Schema.Attribute.Media<"images", true>;
     image: Schema.Attribute.Media<"images">;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<"oneToMany", "api::course.course"> &
@@ -451,6 +452,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     organizer: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<"Gera\u00E7\u00E3o B-Bright">;
+    price: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     registrations: Schema.Attribute.Relation<"oneToMany", "api::registration.registration">;
     slug: Schema.Attribute.UID<"title"> & Schema.Attribute.Required;
@@ -537,6 +539,7 @@ export interface ApiDocumentsPageDocumentsPage extends Struct.SingleTypeSchema {
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    documentsTitle: Schema.Attribute.String;
     heroImage: Schema.Attribute.Media<"images">;
     heroLabel: Schema.Attribute.String;
     heroTitle: Schema.Attribute.String;
@@ -563,6 +566,7 @@ export interface ApiGalleryPageGalleryPage extends Struct.SingleTypeSchema {
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
+    galeriaTitulo: Schema.Attribute.String;
     heroImage: Schema.Attribute.Media<"images">;
     heroLabel: Schema.Attribute.String;
     heroTitle: Schema.Attribute.String;
@@ -692,7 +696,7 @@ export interface ApiMemberPageMemberPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
     heroImage: Schema.Attribute.Media<"images">;
-    heroLabel: Schema.Attribute.String;
+    heroSubtitle: Schema.Attribute.Text;
     heroTitle: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<"oneToMany", "api::member-page.member-page"> &
@@ -731,7 +735,7 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
     phone: Schema.Attribute.String & Schema.Attribute.Required;
     photo: Schema.Attribute.Media<"images">;
     publishedAt: Schema.Attribute.DateTime;
-    status: Schema.Attribute.Enumeration<["pendente", "ativo", "inativo"]> &
+    status: Schema.Attribute.Enumeration<["pendente", "aprovado", "rejeitado"]> &
       Schema.Attribute.DefaultTo<"pendente">;
     termsAccepted: Schema.Attribute.Boolean &
       Schema.Attribute.Required &

@@ -43,6 +43,7 @@ export default {
       path: '/members/:id',
       handler: 'member.update',
       config: {
+        auth: false,
         policies: [],
         middlewares: [],
       },
@@ -52,6 +53,7 @@ export default {
       path: '/members/:id',
       handler: 'member.delete',
       config: {
+        auth: false,
         policies: [],
         middlewares: [],
       },

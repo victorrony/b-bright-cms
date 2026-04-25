@@ -33,11 +33,21 @@
     },
     "sex": {
       "type": "enumeration",
-      "enum": ["masculino", "feminino", "outro"]
+      "enum": [
+        "masculino",
+        "feminino",
+        "outro"
+      ]
     },
     "occupation": {
       "type": "enumeration",
-      "enum": ["estudante", "empregado", "desempregado", "empreendedor", "outro"]
+      "enum": [
+        "estudante",
+        "empregado",
+        "desempregado",
+        "empreendedor",
+        "outro"
+      ]
     },
     "message": {
       "type": "text"

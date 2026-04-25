@@ -12,16 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "heroLabel": {
-      "type": "string"
-    },
     "heroTitle": {
       "type": "string"
     },
     "heroImage": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heroSubtitle": {
+      "type": "text"
     }
   }
 }
