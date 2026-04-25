@@ -566,7 +566,7 @@ export interface ApiGalleryPageGalleryPage extends Struct.SingleTypeSchema {
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<"oneToOne", "admin::user"> & Schema.Attribute.Private;
-    galeriaTitulo: Schema.Attribute.String;
+    galleryTitle: Schema.Attribute.String;
     heroImage: Schema.Attribute.Media<"images">;
     heroLabel: Schema.Attribute.String;
     heroTitle: Schema.Attribute.String;
